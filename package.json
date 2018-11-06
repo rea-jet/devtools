@@ -1,7 +1,7 @@
 {
   "name": "@rea-jet/devtools",
   "version": "0.0.1",
-  "description": "",
+  "description": "Contains all babel, jest, eslint, prettier presets, plugins & config used for rea-jet projects.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -30,5 +30,14 @@
     "eslint": "5",
     "eslint-config-rea": "3",
     "jest": "23"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rea-jet/devtools.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rea-jet/devtools/issues"
+  },
+  "homepage": "https://github.com/rea-jet/devtools#readme"
 }
