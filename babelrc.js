@@ -24,7 +24,8 @@ module.exports = {
     '@babel/plugin-proposal-class-properties',
     '@babel/plugin-proposal-object-rest-spread',
     'babel-plugin-transform-function-bind',
-    ['@babel/plugin-proposal-decorators', { legacy: true }]
+    ['@babel/plugin-proposal-decorators', { legacy: true }],
+    '@babel/plugin-transform-react-constant-elements'
   ]
   // ignore: ['/node_modules/(?!__mocks__|__tests__)'],
   // retainLines: true
