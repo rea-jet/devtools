@@ -30,6 +30,7 @@
     "babel-plugin-named-asset-import": "0.2.3",
     "eslint": "5",
     "eslint-config-rea": "3",
+    "eslint-plugin-jest": "22",
     "jest": "23"
   },
   "devDependencies": {},

@@ -1,1 +1,3 @@
-module.exports = require('eslint-config-rea');
+module.exports = {
+  'extends': ['rea', 'plugin:jest/recommended']
+}
