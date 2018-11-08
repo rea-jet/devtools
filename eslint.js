@@ -1,3 +1,8 @@
 module.exports = {
-  'extends': ['rea', 'plugin:jest/recommended']
-}
+  parser: 'babel-eslint',
+  plugins: ['jest', 'babel'],
+  env: {
+    'jest/globals': true
+  },
+  extends: ['rea', 'plugin:jest/recommended']
+};
