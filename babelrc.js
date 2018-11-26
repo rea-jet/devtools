@@ -14,7 +14,7 @@ module.exports = {
   ],
   env: {
     production: {
-      presets: ['babili'],
+      presets: ['minify'],
       retainLines: false
     }
   },
