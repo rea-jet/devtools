@@ -7,7 +7,8 @@ module.exports = {
   testPathIgnorePatterns: [
     '<rootDir>/build/',
     '<rootDir>/node_modules/',
-    '<rootDir>/dist/'
+    '<rootDir>/dist/',
+    '<rootDir>/dev/'
   ],
   transform: {
     '^.+\\.(js|jsx|ts|tsx)$': 'babel-jest'
