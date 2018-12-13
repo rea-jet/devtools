@@ -25,6 +25,7 @@
     "@babel/plugin-transform-react-constant-elements": "7.0.0",
     "@babel/plugin-transform-runtime": "7.1",
     "@babel/preset-env": "7.1",
+    "@babel/preset-flow": "7.0.0",
     "@babel/preset-react": "7",
     "@babel/preset-typescript": "7.1",
     "@babel/runtime": "7.1",
@@ -39,6 +40,7 @@
     "eslint-config-rea": "3",
     "eslint-plugin-jest": "22",
     "eslint-plugin-prettier": "3.0.0",
+    "flow-bin": "0.88.0",
     "jest": "23.6.0",
     "npm-run-all": "4.1.5",
     "prettier": "1.15.1",
@@ -53,7 +55,5 @@
   },
   "homepage": "https://github.com/rea-jet/devtools#readme",
   "devDependencies": {
-    "@babel/preset-flow": "7.0.0",
-    "flow-bin": "0.88.0"
   }
 }
