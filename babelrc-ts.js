@@ -10,7 +10,7 @@ module.exports = {
         }
       }
     ],
-    '@babel/preset-flow'
+    '@babel/preset-typescript'
   ],
   env: {
     production: {
@@ -29,7 +29,7 @@ module.exports = {
     [
       'module-resolver',
       {
-        extensions: ['.js', '.jsx']
+        extensions: ['.js', '.jsx', '.ts', '.tsx']
       }
     ]
   ]
