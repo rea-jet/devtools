@@ -52,5 +52,8 @@
     "url": "https://github.com/rea-jet/devtools/issues"
   },
   "homepage": "https://github.com/rea-jet/devtools#readme",
-  "devDependencies": {}
+  "devDependencies": {
+    "babel-preset-flow": "6.23.0",
+    "flow-bin": "0.88.0"
+  }
 }
