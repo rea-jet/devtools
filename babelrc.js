@@ -11,7 +11,7 @@ module.exports = {
       }
     ],
     '@babel/preset-typescript',
-    'flow'
+    '@babel/preset-flow'
   ],
   env: {
     production: {
