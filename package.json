@@ -7,6 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
+    "check-used-versions": "./bin/check-used-versions.js",
+    "set-package-version": "./bin/set-package-version.js",
     "babel": "./node_modules/.bin/babel",
     "jest": "./node_modules/.bin/jest",
     "eslint": "./node_modules/.bin/eslint"
