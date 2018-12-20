@@ -11,7 +11,8 @@
     "set-package-version": "./bin/set-package-version.js",
     "babel": "./node_modules/.bin/babel",
     "jest": "./node_modules/.bin/jest",
-    "eslint": "./node_modules/.bin/eslint"
+    "eslint": "./node_modules/.bin/eslint",
+    "flow": "./node_modules/.bin/flow"
   },
   "keywords": [],
   "author": "Dennis Sänger <rea-jet-babel-config-18@mail.ds82.de>",
