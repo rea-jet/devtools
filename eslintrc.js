@@ -1,8 +1,16 @@
 module.exports = {
   parser: 'babel-eslint',
-  plugins: ['jest', 'babel'],
+  plugins: ['flowtype', 'jest', 'babel'],
   env: {
     'jest/globals': true
   },
-  extends: ['rea', 'plugin:jest/recommended', 'plugin:prettier/recommended']
+  extends: [
+    'plugin:flowtype/recommended',
+    'rea',
+    'plugin:jest/recommended',
+    'plugin:prettier/recommended'
+  ],
+  rules: {
+    'flowtype/no-types-missing-file-annotation': 0
+  }
 };
