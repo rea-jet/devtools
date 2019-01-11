@@ -10,7 +10,8 @@ module.exports = {
         }
       }
     ],
-    '@babel/preset-flow'
+    '@babel/preset-flow',
+    '@rea-jet/babel-preset-rea'
   ],
   env: {
     production: {
@@ -19,13 +20,10 @@ module.exports = {
     }
   },
   plugins: [
-    ['@babel/plugin-proposal-decorators', { legacy: true }],
     '@babel/plugin-transform-modules-commonjs',
     '@babel/plugin-transform-runtime',
-    ['@babel/plugin-proposal-class-properties', { loose: true }],
     '@babel/plugin-proposal-object-rest-spread',
     '@babel/plugin-transform-react-constant-elements',
-    '@babel/plugin-proposal-function-bind',
     [
       'module-resolver',
       {
