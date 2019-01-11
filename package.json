@@ -12,7 +12,10 @@
     "babel": "./node_modules/.bin/babel",
     "jest": "./node_modules/.bin/jest",
     "eslint": "./node_modules/.bin/eslint",
-    "flow": "./node_modules/.bin/flow"
+    "flow": "./node_modules/.bin/flow",
+    "npm-run-all": "./node_modules/.bin/npm-run-all",
+    "run-s": "./node_modules/.bin/run-s",
+    "run-p": "./node_modules/.bin/run-p"
   },
   "keywords": [],
   "author": "Dennis Sänger <rea-jet-babel-config-18@mail.ds82.de>",
