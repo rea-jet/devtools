@@ -9,6 +9,7 @@
   "bin": {
     "check-used-versions": "./bin/check-used-versions.js",
     "set-package-version": "./bin/set-package-version.js",
+    "set-package-main": "./bin/set-package-main.js",
     "babel": "./node_modules/.bin/babel",
     "jest": "./node_modules/.bin/jest",
     "eslint": "./node_modules/.bin/eslint",
