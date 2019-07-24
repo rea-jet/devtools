@@ -63,7 +63,7 @@ const printResult = db => {
   } else {
     console.log('All good! :)');
   }
-  console.log(JSON.stringify(db, null, ' '));
+  console.log(JSON.stringify(db, null, 2));
 };
 
 pipe(

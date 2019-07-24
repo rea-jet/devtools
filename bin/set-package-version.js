@@ -58,7 +58,7 @@ const setPackageVersion = curry((name, version, packageUri) => {
     pkgJson.devDependencies[name] = version;
   }
 
-  fs.writeFileSync(fullUri, JSON.stringify(pkgJson, null, ' '));
+  fs.writeFileSync(fullUri, JSON.stringify(pkgJson, null, 2));
   return packageUri;
 });
 
