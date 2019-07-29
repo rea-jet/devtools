@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
+    "check-hoisting": "./bin/check-hoisting.js",
     "check-used-versions": "./bin/check-used-versions.js",
     "set-package-version": "./bin/set-package-version.js",
     "set-package-main": "./bin/set-package-main.js",
