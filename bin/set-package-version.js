@@ -41,14 +41,14 @@ const hasDevDependencyEntry = (name, json) =>
   hasPath(['devDependencies', name], json);
 
 const hasDependency = curry((name, packageUri) => {
-  const pkgJson = require(pathN.join(rootDir, packageUri));
+  const pkgJson = require(packageUri);
   return (
     hasDependencyEntry(name, pkgJson) || hasDevDependencyEntry(name, pkgJson)
   );
 });
 
 const setPackageVersion = curry((name, version, packageUri) => {
-  const fullUri = pathN.join(rootDir, packageUri);
+  const fullUri = packageUri;
   const pkgJson = require(fullUri);
 
   if (hasDependencyEntry(name, pkgJson)) {
