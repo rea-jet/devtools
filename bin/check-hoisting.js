@@ -8,7 +8,8 @@ const {
   getPackageDirs,
   addPackageJson,
   extractVersionOf,
-  buildDatabase
+  buildDatabase,
+  getRootDir
 } = require('./helper');
 
 const package = argv.name;
@@ -33,7 +34,8 @@ const checkVersionResults = db => {
 };
 
 const checkInstalledVersion = version => {
-  const packageVersion = require(`${package}/package.json`).version;
+  const packageVersion = require(`${getRootDir()}/node_modules/${package}/package.json`)
+    .version;
   if (packageVersion !== version) {
     console.log(
       `Required version of ${package} is ${version} but found ${packageVersion} installed`
