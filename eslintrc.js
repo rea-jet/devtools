@@ -4,5 +4,5 @@ module.exports = {
   env: {
     'jest/globals': true
   },
-  extends: ['rea', 'plugin:jest/recommended', 'plugin:prettier/recommended']
+  extends: ['plugin:jest/recommended', 'plugin:prettier/recommended', 'rea']
 };
