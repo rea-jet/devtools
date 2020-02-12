@@ -11,13 +11,10 @@ if (!newMain) {
 
 const packageJsonPath = path.resolve(process.cwd(), 'package.json');
 
-let package = fs.readFileSync(packageJsonPath);
-let parsed = JSON.parse(package);
+const package = fs.readFileSync(packageJsonPath, { encoding: 'utf8' });
+const parsed = JSON.parse(package);
 parsed.main = newMain;
-let stringified = JSON.stringify(parsed, null, 2);
-
-//add new line at the end
-stringified += '\n';
+const stringified = JSON.stringify(parsed, null, 2) + '\n';
 
 fs.writeFileSync(packageJsonPath, stringified);
 
