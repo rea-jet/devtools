@@ -26,7 +26,7 @@ const notNil = complement(isNil);
 
 const rootDir = getRootDir();
 const package = argv.name;
-const version = argv.to;
+const version = String(argv.to);
 
 const hasPath = curry((keyPath, pkgJson) =>
   pipe(
