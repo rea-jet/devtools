@@ -17,7 +17,8 @@
     "flow": "./node_modules/.bin/flow",
     "npm-run-all": "./node_modules/.bin/npm-run-all",
     "run-s": "./node_modules/.bin/run-s",
-    "run-p": "./node_modules/.bin/run-p"
+    "run-p": "./node_modules/.bin/run-p",
+    "check-file-size": "./bin/check-file-size.js"
   },
   "keywords": [],
   "author": "Dennis Sänger <rea-jet-babel-config-18@mail.ds82.de>",
