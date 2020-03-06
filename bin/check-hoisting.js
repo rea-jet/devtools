@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 const yargs = require('yargs');
 const fs = require('fs');
-const pathN = require('path');
-const { pipe, map, filter, path, reduce, and } = require('ramda');
+const { pipe, map, filter, reduce, and, sort, head, last } = require('ramda');
+const semverCmp = require('semver-compare');
 
 const {
   getPackageDirs,
@@ -14,6 +14,30 @@ const {
 
 const packages = yargs.array('name').parse().name;
 
+const areVersionsSubversions = db => {
+  const isSubversion = ([isValid, subversion], version) => {
+    return isValid
+      ? [version.indexOf(subversion) === 0, version]
+      : [false, version];
+  };
+
+  return pipe(
+    Object.keys,
+    sort(semverCmp),
+    reduce(isSubversion, [true, '']),
+    head
+  )(db);
+};
+
+const getConcreteVersion = db =>
+  pipe(
+    Object.keys,
+    sort(semverCmp),
+    // use last because it is the most specific version
+    // e.g. ['4', '4.1', '4.1.7'] => '4.1.7
+    last
+  )(db);
+
 const checkVersionResults = package => db => {
   const numberOfVersions = Object.keys(db).length;
 
@@ -22,7 +46,7 @@ const checkVersionResults = package => db => {
     return false;
   }
 
-  if (numberOfVersions > 1) {
+  if (numberOfVersions > 1 && !areVersionsSubversions(db)) {
     console.log(
       `There are ${numberOfVersions} different versions of ${package}:`
     );
@@ -30,7 +54,7 @@ const checkVersionResults = package => db => {
     return false;
   }
 
-  return Object.keys(db)[0];
+  return getConcreteVersion(db);
 };
 
 const checkInstalledVersion = package => version => {
