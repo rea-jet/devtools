@@ -1,7 +1,6 @@
 #!/usr/bin/env node
-const path = require('path');
-const fs = require('fs');
 const argv = require('yargs').argv;
+const modifyPackageJson = require('../package-utils').modifyPackageJson;
 
 const newMain = argv.to;
 if (!newMain) {
@@ -9,13 +8,9 @@ if (!newMain) {
   process.exit(1);
 }
 
-const packageJsonPath = path.resolve(process.cwd(), 'package.json');
-
-const package = fs.readFileSync(packageJsonPath, { encoding: 'utf8' });
-const parsed = JSON.parse(package);
-parsed.main = newMain;
-const stringified = JSON.stringify(parsed, null, 2) + '\n';
-
-fs.writeFileSync(packageJsonPath, stringified);
+const parsed = modifyPackageJson((packageJson) => {
+  packageJson.main = newMain;
+  return packageJson;
+});
 
 console.log(`Updated main of ${parsed.name} to ${newMain}`);
